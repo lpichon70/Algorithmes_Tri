@@ -1,3 +1,5 @@
+#include "bubble_sort.h"
+
 #include <stdbool.h>
 #include <stdio.h>
 

@@ -1,29 +1,10 @@
+#include "radix_sort.h"
+#include "../utils/utils.h"
+
 #include <stdio.h>
 #include <stdbool.h>
 #include <math.h>
-
-/**
- * ! Les fonction de getMax et Initialize  EmptyTab sont déjà déclarés dans countingTab. 
- * TODO Faire un refactoring du code afin de créer une classe mère
- */
-
-/**
- * Retourne la longueur d'un entier
- */
-int getLength(int n)
-{
-    int lenght = 0;
-
-    if (n == 0) return 1;
-
-    while (n != 0)
-    {
-        n /= 10;
-        lenght++;
-    }
-
-    return lenght;    
-}
+#include <stdlib.h>
 
 /**
  * Tri le tableau en utilisant la même méthode qu'un algorithme de counting sort

@@ -1,36 +1,8 @@
+#include "counting_sort.h"
+#include "../utils/utils.h"
+
 #include <stdio.h>
 #include <stdbool.h>
-
-/**
- * Retourne l'entier le plus grand du tableau.
- */
-int getMaxValue(int tab[], int n)
-{
-    int idMax = 0;
-
-    for (int i = 1; i < n; i++)
-    {
-        if (tab[i] > tab[idMax])
-        {
-            idMax = i;
-        }
-        
-    }
-
-    return tab[idMax];
-    
-}
-
-/**
- * Initialise le tableau avec des 0
- * @param n La taille du tableau Count
- */
-void initializeEmptyCountArray(int countArray[], int n){
-    for (int i = 0; i < n; i++)
-    {
-        countArray[i] = 0;
-    }
-}
 
 /**
  * Rempli le tableau count par les bonnes valeurs
@@ -42,20 +14,6 @@ void fillCountArray(int countArray[], int tab[], int n){
     {
         countArray[tab[i]]+=1;
     }  
-}
-
-/**
- * Changement de la somme de chanque valeur du tableau : Changement de la somme tab[i] = tab[i] + tab[i-1]
- * Cette partie est une spécificité de l'algo
- * @param n La taille du tableau Count
- */
-void setSumCountArray(int countArray[], int n){
-
-    for (int i = 1; i < n; i++)
-    {
-        countArray[i] += countArray[i-1];
-    }
-    
 }
 
 /**

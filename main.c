@@ -1,16 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "src/1_bubble_sort.c"
-#include "src/2_selection_sort.c"
-#include "src/3_insertion_sort.c"
-#include "src/4_shell_sort.c"
-#include "src/5_heap_sort.c"
-#include "src/6_merge_sort.c"
-#include "src/7_quick_sort.c"
-#include "src/8_counting_sort.c"
-#include "src/9_radix_sort.c"
-#include "src/10_bucket_sort.c"
+#include "src/1_Bubble_Sort/bubble_sort.h"
+#include "src/2_Selection_Sort/selection_sort.h"
+#include "src/3_Insertion_Sort/insertion_sort.h"
+#include "src/4_Shell_Sort/shell_sort.h"
+#include "src/5_Heap_Sort/heap_sort.h"
+#include "src/6_Merge_Sort/merge_sort.h"
+#include "src/7_Quick_Sort/quick_sort.h"
+#include "src/8_Counting_Sort/counting_sort.h"
+#include "src/9_Radix_Sort/radix_sort.h"
+#include "src/10_Bucket_Sort/bucket_sort.h"
 
 
 #define MAX_SIZE 500
@@ -60,12 +60,12 @@ int main() {
     scanf(" %c", &file_choice);
 
     if (file_choice == '1') {
-        filename = "C:/Users/urb2584/Desktop/Perso/new_tri_algos/Storage/tabToSortExtraShort.txt";
+        filename = "C:/Users/urb2584/Desktop/Perso/tri_algos/Storage/tabToSortExtraShort.txt";
     } else if (file_choice == '2') {
-        filename = "C:/Users/urb2584/Desktop/Perso/new_tri_algos/Storage/tabToSortShort.txt";
+        filename = "C:/Users/urb2584/Desktop/Perso/tri_algos/Storage/tabToSortShort.txt";
     }
     else if (file_choice == '3') {
-        filename = "C:/Users/urb2584/Desktop/Perso/new_tri_algos/Storage/tabToSortLong.txt";
+        filename = "C:/Users/urb2584/Desktop/Perso/tri_algos/Storage/tabToSortLong.txt";
     }
     else {
         printf("Choix invalide.\n");

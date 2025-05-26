@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/urb2584/Desktop/Perso/new_tri_algos",
-      "program": "c:/Users/urb2584/Desktop/Perso/new_tri_algos/build/Debug/outDebug",
+      "cwd": "c:/Users/urb2584/Desktop/Perso/tri_algos",
+      "program": "c:/Users/urb2584/Desktop/Perso/tri_algos/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

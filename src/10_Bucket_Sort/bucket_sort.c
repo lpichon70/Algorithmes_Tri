@@ -1,22 +1,12 @@
+#include "bucket_sort.h"
+#include "../3_Insertion_Sort/insertion_sort.h"
+#include "../utils/utils.h"
+
 #include <stdio.h>
 #include <stdbool.h>
 
 #define BUCKET_COUNT 5
 
-/**
- * Récupère la plus petite valeur du tableau
- */
-int getMinValue(int tab[], int  n){
-    int min = tab[0];
-
-    for (int i = 1; i < n; i++)
-    {
-        if (tab[i] < min) min = tab[i];
-    }
-
-    return min;
-    
-}
 
 /**
  * Algorithme de tri par compartiments

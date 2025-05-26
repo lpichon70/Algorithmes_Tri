@@ -7,13 +7,23 @@
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
-                "${file}",
+                "${workspaceFolder}/main.c",
+                "${workspaceFolder}/src/1_Bubble_Sort/bubble_sort.c",
+                "${workspaceFolder}/src/2_Selection_Sort/selection_sort.c",
+                "${workspaceFolder}/src/3_Insertion_Sort/insertion_sort.c",
+                "${workspaceFolder}/src/4_Shell_Sort/shell_sort.c",
+                "${workspaceFolder}/src/5_Heap_Sort/heap_sort.c",
+                "${workspaceFolder}/src/6_Merge_Sort/merge_sort.c",
+                "${workspaceFolder}/src/7_Quick_Sort/quick_sort.c",
+                "${workspaceFolder}/src/8_Counting_Sort/counting_sort.c",
+                "${workspaceFolder}/src/9_Radix_Sort/radix_sort.c",
+                "${workspaceFolder}/src/10_Bucket_Sort/bucket_sort.c",
+                "${workspaceFolder}/src/Utils/utils.c",
                 "-o",
-                "${fileDirname}\\${fileBasenameNoExtension}.exe",
-                ""
+                "${workspaceFolder}/main.exe"
             ],
             "options": {
-                "cwd": "C:/msys64/ucrt64/bin"
+                "cwd": "${workspaceFolder}"
             },
             "problemMatcher": [
                 "$gcc"

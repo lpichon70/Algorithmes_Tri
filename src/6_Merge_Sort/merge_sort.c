@@ -1,3 +1,5 @@
+#include "merge_sort.h"
+
 #include <stdio.h>
 #include <stdbool.h>
 
