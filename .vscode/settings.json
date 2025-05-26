@@ -60,6 +60,7 @@
     "stdio.h": "c",
     "stdbool.h": "c",
     "merge_sort.h": "c",
-    "counting_sort.h": "c"
+    "counting_sort.h": "c",
+    "selection_sort.h": "c"
   }
 }

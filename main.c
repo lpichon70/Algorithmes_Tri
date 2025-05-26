@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 
 #include "src/1_Bubble_Sort/bubble_sort.h"
 #include "src/2_Selection_Sort/selection_sort.h"
@@ -13,7 +14,7 @@
 #include "src/10_Bucket_Sort/bucket_sort.h"
 
 
-#define MAX_SIZE 500
+#define MAX_SIZE 50000
 
 /**
  * Charge un tableau dans un fichier .TXT
@@ -56,16 +57,20 @@ int main() {
     printf("  1. tabToSortExtraShort.txt (10 valeurs)\n");
     printf("  2. tabToSortShort.txt (50 valeurs)\n");
     printf("  3. tabToSortLong.txt (300 valeurs)\n");
-    printf("Ton choix (1, 2 ou 3) : ");
+    printf("  4. tabToSortVeryLong.txt (50 000 valeurs)\n");
+    printf("Ton choix (1, 2, 3 ou 4) : ");
     scanf(" %c", &file_choice);
 
     if (file_choice == '1') {
-        filename = "C:/Users/urb2584/Desktop/Perso/tri_algos/Storage/tabToSortExtraShort.txt";
+        filename = "storage/tabToSortExtraShort.txt";
     } else if (file_choice == '2') {
-        filename = "C:/Users/urb2584/Desktop/Perso/tri_algos/Storage/tabToSortShort.txt";
+        filename = "storage/tabToSortShort.txt";
     }
     else if (file_choice == '3') {
-        filename = "C:/Users/urb2584/Desktop/Perso/tri_algos/Storage/tabToSortLong.txt";
+        filename = "storage/tabToSortLong.txt";
+    }
+     else if (file_choice == '4') {
+        filename = "storage/tabToSortVeryLong.txt";
     }
     else {
         printf("Choix invalide.\n");
@@ -95,6 +100,8 @@ int main() {
 
     printf("\nTableau avant tri :\n");
     print_array(tab, size);
+
+    clock_t start = clock();
 
     switch (algo_choice) {
         case 'a':
@@ -132,8 +139,13 @@ int main() {
             return 1;
     }
 
+    clock_t end = clock();
+    double duration_ms = (double)(end - start) * 1000.0 / CLOCKS_PER_SEC;
+
     printf("\nTableau après tri :\n");
     print_array(tab, size);
+
+    printf("\n⏱ Temps d'exécution : %.3f ms\n", duration_ms);
 
     return 0;
 }
